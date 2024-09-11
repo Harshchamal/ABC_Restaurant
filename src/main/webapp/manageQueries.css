@@ -1,0 +1,167 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    padding-top: 70px; /* Space for fixed header */
+}
+
+/* Header Section */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #333;
+    color: white;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header a.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+
+header a.logo i {
+    margin-right: 10px;
+}
+
+#menu-bar {
+    font-size: 1.8rem;
+    display: none;
+    cursor: pointer;
+}
+
+header nav {
+    display: flex;
+    gap: 20px;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+    border-radius: 5px;
+}
+
+header nav a:hover {
+    background-color: #1a252f;
+    border-radius: 5px;
+}
+
+/* Main Section */
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin-top: 40px; /* Additional spacing to separate from the header */
+}
+
+/* Respond to Queries Section */
+#respond-queries {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+}
+
+#respond-queries h2 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Form Styles */
+#query-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#query-form label {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+#query-form input[type="text"],
+#query-form textarea {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: #333;
+}
+
+#query-form input[type="text"]:focus,
+#query-form textarea:focus {
+    border-color: #ff6b6b;
+    outline: none;
+}
+
+#query-form textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+#query-form button {
+    padding: 10px 15px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 1rem;
+}
+
+#query-form button:hover {
+    background-color: #1a252f;
+}
+
+#query-form button[type="button"] {
+    background-color: #e74c3c;
+}
+
+#query-form button[type="button"]:hover {
+    background-color: #c0392b;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    header nav {
+        display: none;
+    }
+
+    #menu-bar {
+        display: block;
+    }
+
+    main {
+        padding: 10px;
+    }
+
+    #respond-queries {
+        padding: 20px;
+    }
+}
